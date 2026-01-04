@@ -8,6 +8,8 @@ endif()
 # find dependencies
 find_package(ament_cmake REQUIRED)
 add_subdirectory(third_party/qpOASES)
+set_target_properties(qpOASES PROPERTIES POSITION_INDEPENDENT_CODE ON)
+add_compile_options(-Wall -Wextra -Wpedantic -Wno-unused-parameter)
 # uncomment the following section in order to fill in
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
